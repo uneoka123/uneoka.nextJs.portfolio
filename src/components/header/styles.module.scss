@@ -1,0 +1,27 @@
+@use "@/scss/mixins" as *;
+
+.header {
+  background-color: var(--color-bg);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.container {
+  @include container;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 60px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  box-sizing: border-box;
+}
+
+.logo {
+  margin-right: auto;
+  z-index: 1;
+}

@@ -1,0 +1,11 @@
+.socialLink {
+  display: block;
+  transition: .2s;
+
+  &:hover,
+  &:focus-visible {
+    color: var(--color-accent);
+  }
+}
+
+.socialIcon { display: block; }

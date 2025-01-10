@@ -1,0 +1,8 @@
+@use "@/scss/mixins" as *;
+
+.container {
+  @include container;
+  @include media-max(md) {
+    max-width: 450px;
+  }
+}

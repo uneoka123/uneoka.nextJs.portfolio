@@ -1,0 +1,68 @@
+@use "@/scss/mixins" as *;
+
+.contacts {
+  display: grid;
+  gap: 30px;
+  padding-top: 70px;
+  padding-bottom: 50px;
+
+  @include media-min(md) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+}
+
+.info {
+  display: grid;
+  align-items: start;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  color: var(--color-fg-secondary);
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.infoTitle {
+  color: var(--color-fg);
+  margin-bottom: 5px;
+}
+
+.link {
+  &:hover,
+  &:focus-visible {
+    text-decoration: underline;
+  }
+}
+
+.icon {
+  color: var(--color-accent);
+  margin-right: 15px;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.socialLink {
+  color: var(--color-fg-secondary);
+  padding: 5px 10px;
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &:hover,
+  &:focus-visible {
+    color: var(--color-accent);
+    transform: translateY(-3px);
+  }
+}

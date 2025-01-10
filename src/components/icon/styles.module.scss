@@ -1,0 +1,8 @@
+.icon {
+  fill: currentColor;
+
+  & [stroke-width] {
+    fill: none;
+    stroke: currentColor;  
+  }
+}

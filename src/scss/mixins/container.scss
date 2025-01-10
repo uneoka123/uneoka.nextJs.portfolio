@@ -1,0 +1,20 @@
+@use '../common/vars' as *;
+@use './media' as *;
+
+@mixin container {
+  max-width: map-get($widths, xl);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $gap-sm;
+  padding-right: $gap-sm;
+  box-sizing: border-box;
+
+  @include media-min(md) {
+    padding-left: $gap-md;
+    padding-right: $gap-md;
+  }
+  @include media-min(xl) {
+    padding-left: $gap-lg;
+    padding-right: $gap-lg;
+  }
+}

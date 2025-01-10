@@ -1,0 +1,52 @@
+.form {
+  display: grid;
+  gap: 25px;
+}
+
+.field {
+  position: relative;
+}
+
+.input {
+  color: var(--color-fg);
+  font-size: 1.125rem;
+  width: 100%;
+  padding: 15px;
+  background-color: var(--color-bg-secondary);
+  border: none;
+  border-radius: 6px;
+  box-sizing: border-box;
+  caret-color: var(--color-yellow);
+  outline: 2px solid transparent;
+  resize: none;
+  transition: .2s;
+
+  &Error {
+    outline-color: var(--color-accent);
+  }
+
+  &:hover,
+  &:focus-visible {
+    outline-color: var(--color-accent);
+  }
+}
+
+.error {
+  color: var(--color-accent);
+  font-size: .85rem;
+  margin-top: 3px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.submit {
+  gap: 10px;
+  min-width: 150px;
+  margin-right: auto;
+
+  &:disabled {
+    pointer-events: none;
+    opacity: .7;
+  }
+}

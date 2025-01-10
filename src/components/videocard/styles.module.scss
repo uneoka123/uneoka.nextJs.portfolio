@@ -1,0 +1,268 @@
+@use "@/scss/mixins" as *;
+
+.card {
+  background-color: var(--color-bg-secondary);
+  border-radius: 15px;
+  box-shadow:
+    0px 3px 6px rgba(0, 0, 0, .05),
+    0px 8px 15px rgba(0, 0, 0, .1),
+    0 0 0 1px rgba(255, 255, 255, .1);
+  overflow: hidden;
+  position: relative;
+  transition: box-shadow .25s;
+  z-index: 1;
+  height: 450px;
+
+
+  &:hover {
+    box-shadow:
+      0px 3px 6px rgba(0, 0, 0, .04),
+      0px 15px 25px rgba(0, 0, 0, .3),
+      0 0 0 1px rgba(255, 255, 255, .2);
+
+    .shine {
+      opacity: .6;
+      transform: translate(-60%, -60%);
+    }
+
+    .tiles {
+      opacity: .15;
+      transition-delay: .25s;
+    }
+
+    .tile {
+      animation-name: tile;
+    }
+
+    .line {
+      &:before {
+        transform: scaleX(1);
+      }
+
+      &:after {
+        transform: scaleY(1);
+      }
+    }
+
+    .line_1 {
+
+      &:before,
+      &:after {
+        transition-delay: 0s;
+      }
+    }
+
+    .line_2 {
+
+      &:before,
+      &:after {
+        transition-delay: .15s;
+      }
+    }
+
+    .line_3 {
+
+      &:before,
+      &:after {
+        transition-delay: .3s;
+      }
+    }
+  }
+}
+
+.link_img {
+  display: block;
+  border-radius: 10px;
+  margin: 16px 16px 0;
+  box-sizing: border-box;
+}
+
+.img {
+  border-radius: 10px;
+  aspect-ratio: 1.5 / 1;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.content {
+  padding: 24px 16px 16px;
+  border-radius: 0 0 15px 15px;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+
+.content_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.title_link {
+  @include link-hover(var(--color-accent), left);
+  margin-right: 10px;
+}
+
+.text {
+  color: var(--color-fg-secondary);
+  font-size: .875rem;
+  margin-bottom: 10px;
+}
+
+.topics {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px 10px;
+  margin-top: auto;
+}
+
+.shine {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-accent);
+  border-radius: 50%;
+  filter: blur(25px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-100%, -100%);
+  transition: .5s;
+  z-index: -1;
+}
+
+.background {
+  position: absolute;
+  inset: 0;
+  margin-top: -10px;
+  mask-image: radial-gradient(circle at 60% 50%,
+      #000 0%,
+      #000 15%,
+      transparent 80%);
+  z-index: -1;
+}
+
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  opacity: 0;
+  position: absolute;
+  inset: 0;
+  transition: opacity .25s;
+}
+
+.tile {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-accent);
+  opacity: 0;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+
+  &.tile_5,
+  &.tile_9,
+  &.tile_10 {
+    animation-delay: -2s;
+  }
+
+  &.tile_1,
+  &.tile_2,
+  &.tile_6 {
+    animation-delay: -4s;
+  }
+
+  &.tile_3,
+  &.tile_4,
+  &.tile_7 {
+    animation-delay: -6s;
+  }
+}
+
+.line {
+  position: absolute;
+  inset: 0;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    background-color: var(--color-fg);
+    opacity: .15;
+    transition: transform .35s;
+  }
+
+  // horizontal line
+  &:before {
+    height: 1px;
+    width: 100%;
+    transform-origin: 0 50%;
+    transform: scaleX(0);
+  }
+
+  // vertical line
+  &:after {
+    width: 1px;
+    height: 100%;
+    transform-origin: 50% 0;
+    transform: scaleY(0);
+  }
+
+  &.line_1 {
+
+    &:before,
+    &:after {
+      transition-delay: .3s;
+    }
+
+    &:before {
+      top: 33.3%;
+    }
+
+    &:after {
+      left: 25%;
+    }
+  }
+
+  &.line_2 {
+
+    &:before,
+    &:after {
+      transition-delay: .15s;
+    }
+
+    &:before {
+      top: 66.6%;
+    }
+
+    &:after {
+      left: 50%;
+    }
+
+  }
+
+  &.line_3 {
+    &:after {
+      left: 75%;
+    }
+  }
+}
+
+@keyframes tile {
+
+  0%,
+  12.5%,
+  100% {
+    opacity: 1;
+  }
+
+  25%,
+  82.5% {
+    opacity: 0;
+  }
+}

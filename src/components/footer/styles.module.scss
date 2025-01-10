@@ -1,0 +1,44 @@
+@use '@/scss/mixins' as *;
+
+.footer {
+  padding: 20px 0;
+  background-color: var(--color-bg-secondary);
+}
+
+.container {
+  @include container;
+}
+
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.heart {
+  display: inline-block;
+  vertical-align: middle;
+  color: var(--color-accent);
+  line-height: 1;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  color: inherit;
+  font-weight: 500;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 0.2s;
+
+  &:hover {
+    color: var(--color-accent);
+  }
+}
+
+.icon {
+  margin-left: 3px;
+}

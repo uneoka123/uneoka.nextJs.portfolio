@@ -1,0 +1,12 @@
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 1;
+  transform: skewX(-10deg);
+}
+.logo span::first-letter {
+  color: var(--color-accent);
+}/*# sourceMappingURL=styles.module.css.map */

@@ -1,0 +1,22 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: currentColor;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 10px 30px;
+  background-color: transparent;
+  border: 2px solid var(--color-accent);
+  border-radius: 6px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.button svg {
+  margin-right: 10px;
+}
+.button:hover, .button:focus-visible {
+  background-color: var(--color-accent);
+}/*# sourceMappingURL=styles.module.css.map */

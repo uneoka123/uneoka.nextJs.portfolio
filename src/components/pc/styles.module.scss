@@ -1,0 +1,31 @@
+.logo {
+  cursor: pointer;
+  animation: float 4s ease-in-out infinite;
+
+  path {
+    transition: 0.2s;
+
+    &:hover {
+      fill: var(--color-blue);
+    }
+  }
+}
+
+.logoShadow {
+  animation: float 4s ease-in-out infinite;
+}
+
+.button {
+  cursor: pointer;
+  transition: 0.2s;
+
+  &:hover {
+    fill: var(--color-blue);
+  }
+}
+
+@keyframes float {
+  50% {
+    transform: translateY(-40px);
+  }
+}

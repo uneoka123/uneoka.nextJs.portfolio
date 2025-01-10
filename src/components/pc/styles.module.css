@@ -1,0 +1,28 @@
+.logo {
+  cursor: pointer;
+  animation: float 4s ease-in-out infinite;
+}
+.logo path {
+  transition: 0.2s;
+}
+.logo path:hover {
+  fill: var(--color-blue);
+}
+
+.logoShadow {
+  animation: float 4s ease-in-out infinite;
+}
+
+.button {
+  cursor: pointer;
+  transition: 0.2s;
+}
+.button:hover {
+  fill: var(--color-blue);
+}
+
+@keyframes float {
+  50% {
+    transform: translateY(-40px);
+  }
+}/*# sourceMappingURL=styles.module.css.map */

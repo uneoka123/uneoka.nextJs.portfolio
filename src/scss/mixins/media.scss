@@ -1,0 +1,19 @@
+@use "../common/vars" as *;
+
+@mixin media-min($width) {
+  @media (min-width: map-get($widths, $width)) {
+    @content;
+  }
+}
+
+@mixin media-max($width) {
+  @media (max-width: (map-get($widths, $width) - 1)) {
+    @content;
+  }
+}
+
+@mixin media-between($width-min, $width-max) {
+  @media (min-width: map-get($widths, $width-min)) and (max-width: (map-get($widths, $width-max) - 1)) {
+    @content;
+  }
+}

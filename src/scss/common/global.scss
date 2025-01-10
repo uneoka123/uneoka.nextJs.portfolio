@@ -1,0 +1,112 @@
+@use "@/scss/mixins" as *;
+
+:root {
+  --color-white: #fff;
+  --color-black: #000;
+  
+  --color-fg: #fff;
+  --color-fg-secondary: #999;
+  --color-bg: #080808;
+  --color-bg-secondary: #262626;
+  --color-accent: #ff004f;
+  --color-blue: #147efb;
+  --color-yellow: #ffff00;
+}
+
+* {
+  &::selection {
+    color: var(--color-yellow);
+    background-color: transparent;
+  }
+}
+
+html {
+  font-size: 16px;
+  min-height: 100vh;
+  scroll-behavior: smooth !important;
+}
+
+body {
+  display: grid;
+  grid-template-rows: 1fr min-content;
+  color: var(--color-fg);
+  min-height: 100vh;
+  background-color: var(--color-bg);
+}
+
+main {
+  display: grid;
+}
+
+h2 {
+  font-size: 2.6rem;
+  line-height: 1;
+  margin-bottom: 20px;
+
+  span {
+    color: var(--color-accent);
+  }
+
+  @include media-min(md) {
+    font-size: 3.75rem;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+svg {
+  display: block;
+}
+
+.pc_svg__code-shadow,
+.pc_svg__code {
+  animation: float 4s ease-in-out infinite;
+}
+
+.pc_svg__button,
+.pc_svg__code {
+  cursor: pointer;
+
+  path {
+    transition: .2s;
+
+    &:hover {
+      fill: var(--color-blue);
+    }
+  }
+}
+
+@keyframes float {
+  50% {
+    transform: translateY(-40px);
+  }
+}

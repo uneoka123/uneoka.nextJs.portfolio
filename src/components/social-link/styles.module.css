@@ -1,0 +1,11 @@
+.socialLink {
+  display: block;
+  transition: 0.2s;
+}
+.socialLink:hover, .socialLink:focus-visible {
+  color: var(--color-accent);
+}
+
+.socialIcon {
+  display: block;
+}/*# sourceMappingURL=styles.module.css.map */

@@ -1,0 +1,15 @@
+/*
+  The mixin works by adding a pseudo-element (::before) to the element being styled and animating
+  its width and position on hover. The $direction parameter determines where the hover effect
+  originates from, and can be set to one of the following values:
+
+    - center (default): the hover effect starts from the center and expands outwards.
+    - right: the hover effect starts from the right edge and expands leftwards.
+    - left: the hover effect starts from the left edge and expands rightwards.
+    - to-right: the hover effect starts from the left edge and expands rightwards.
+    - to-left: the hover effect starts from the right edge and expands leftwards.
+
+  If $direction is set to any other value, an error will be thrown.
+
+  Overall, this mixin provides a flexible and customizable way to create hover effects for links.
+**//*# sourceMappingURL=link.css.map */

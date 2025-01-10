@@ -1,0 +1,55 @@
+@use "@/scss/mixins" as *;
+
+.intro {
+  min-height: 100vh;
+  padding-top: 60px;
+  box-sizing: border-box;
+
+  @include media-min(md) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+.pc {
+  display: block;
+  aspect-ratio: 1;
+  
+  @include media-max(md) {
+    margin: 24px auto;
+  }
+  @include media-min(md) {
+    align-self: center;
+    order: 2;
+  }
+}
+
+.description {
+  @include media-max(md) {
+    margin: 24px auto;
+  }
+  @include media-min(md) {
+    align-self: center;
+    margin-top: 15%;
+  }
+}
+
+.title {
+  margin-bottom: 10px;
+
+  span {
+    color: var(--color-accent);
+  }
+
+  @include media-min(md) {
+    font-size: 2.6rem;
+  }
+}
+
+.text {
+  color: var(--color-fg-secondary);
+  font-size: 1.2rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
