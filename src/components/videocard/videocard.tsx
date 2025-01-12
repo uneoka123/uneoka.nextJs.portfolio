@@ -8,6 +8,9 @@ import { Icon } from '@/components/icon/icon';
 import { SocialLink } from '@/components/social-link/social-link';
 import styles from './styles.module.scss';
 
+import { FiExternalLink } from "react-icons/fi";
+
+
 type Props = {
   video: string;
   title: string;
@@ -48,7 +51,10 @@ const VideoCard: FC<Props> = ({
               target="_blank"
               rel="noopener noreferrer"
             >
-              {title}
+              <div className={styles.title_link}>
+                <span>{title}</span>
+                <FiExternalLink />
+              </div>
             </Link>
           </h3>
         </div>

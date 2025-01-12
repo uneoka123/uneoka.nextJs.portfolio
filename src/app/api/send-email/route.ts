@@ -1,8 +1,8 @@
 import { NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
+import emailjs from 'emailjs-com';
 
+const EMAIL_SERVICE_ID = process.env.EMAIL_SERVICE_ID;
 const email = process.env.EMAIL;
-const pass = process.env.EMAIL_PASSWORD;
 
 const POST = async (req: Request) => {
   if (req.method !== 'POST') {
@@ -14,33 +14,23 @@ const POST = async (req: Request) => {
   if (!data || !data.name || !data.email || !data.message) {
     return NextResponse.json({ message: 'Bad request' });
   }
-
-  const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      user: email || '',
-      pass: pass || '',
-    }
-  });
+  const templateParams = {
+    to_email: email,
+    from_email: data.email,
+    name: data.name,
+    message: data.message,
+  };
+  console.log(templateParams);
 
   try {
-    await transporter.sendMail({
-      from: email,
-      to: email,
-      subject: "ポートフォリオからのメッセージ",
-      text: data.message,
-      html: `
-        <div>
-          <h1>${data.name}</h1>
-          <p>${data.email}</p>
-          <p>${data.message}</p>
-        </div>
-      `
-    });
-    
-    return NextResponse.json({ message: '成功' });
+    const res = await emailjs.send(`${EMAIL_SERVICE_ID}`, 'template_n917lcf', templateParams, '6aSR3XvKYh5IHGMIwxg0G');
+    console.log(res);
+
+    return NextResponse.json({ message: 'Email sent successfully' });
   } catch (error) {
-    return NextResponse.json({ message: '問題が発生しました' });
+    console.log(error);
+    return NextResponse.json({ message: 'Internal server error' });
+
   }
 }
 

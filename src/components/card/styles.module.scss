@@ -11,7 +11,7 @@
   position: relative;
   transition: box-shadow .25s;
   z-index: 1;
-  height: 450px;
+  height: 550px;
 
   &:hover {
     box-shadow:
@@ -28,17 +28,23 @@
       opacity: .15;
       transition-delay: .25s;
     }
-    
+
     .tile {
       animation-name: tile;
     }
 
     .line {
-      &:before { transform: scaleX(1); }
-      &:after { transform: scaleY(1); }
+      &:before {
+        transform: scaleX(1);
+      }
+
+      &:after {
+        transform: scaleY(1);
+      }
     }
 
     .line_1 {
+
       &:before,
       &:after {
         transition-delay: 0s;
@@ -46,6 +52,7 @@
     }
 
     .line_2 {
+
       &:before,
       &:after {
         transition-delay: .15s;
@@ -53,10 +60,37 @@
     }
 
     .line_3 {
+
       &:before,
       &:after {
         transition-delay: .3s;
       }
+    }
+  }
+
+  .sliderContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .navigation {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .button {
+      background-color: rgba(255, 255, 255, 0.8);
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+      margin: 0 5px;
+      border-radius: 5px;
+      z-index: 8888;
     }
   }
 }
@@ -73,6 +107,8 @@
   aspect-ratio: 1.5 / 1;
   object-fit: cover;
   object-position: top center;
+  width: 100%;
+  height: 300px !important;
 }
 
 .content {
@@ -98,6 +134,12 @@
 .title_link {
   @include link-hover(var(--color-accent), left);
   margin-right: 10px;
+  div{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+  }
 }
 
 .text {
@@ -132,12 +174,10 @@
   position: absolute;
   inset: 0;
   margin-top: -10px;
-  mask-image: radial-gradient(
-    circle at 60% 50%,
-    #000 0%,
-    #000 15%,
-    transparent 80%
-  );
+  mask-image: radial-gradient(circle at 60% 50%,
+      #000 0%,
+      #000 15%,
+      transparent 80%);
   z-index: -1;
 }
 
@@ -207,37 +247,53 @@
   }
 
   &.line_1 {
+
     &:before,
     &:after {
       transition-delay: .3s;
     }
 
-    &:before { top: 33.3%; }
-    &:after { left: 25%; }
+    &:before {
+      top: 33.3%;
+    }
+
+    &:after {
+      left: 25%;
+    }
   }
 
   &.line_2 {
+
     &:before,
     &:after {
       transition-delay: .15s;
     }
 
-    &:before { top: 66.6%; }
-    &:after { left: 50%; }
+    &:before {
+      top: 66.6%;
+    }
+
+    &:after {
+      left: 50%;
+    }
 
   }
 
   &.line_3 {
-    &:after { left: 75%; }
+    &:after {
+      left: 75%;
+    }
   }
 }
 
 @keyframes tile {
+
   0%,
   12.5%,
   100% {
     opacity: 1;
   }
+
   25%,
   82.5% {
     opacity: 0;

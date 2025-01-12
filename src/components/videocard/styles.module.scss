@@ -107,6 +107,13 @@
 .title_link {
   @include link-hover(var(--color-accent), left);
   margin-right: 10px;
+
+  div {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+  }
 }
 
 .text {

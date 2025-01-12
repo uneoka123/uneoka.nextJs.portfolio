@@ -10,7 +10,7 @@ const Contacts = () => {
     <section id="contacts" className={styles.contacts}>
       <div className={styles.content}>
         <h2 className={styles.title}>
-        ご<span>連絡</span>ください！
+          <span>Contact</span> Me！
         </h2>
 
         <div className={styles.info}>
@@ -31,7 +31,14 @@ const Contacts = () => {
             <Icon className={styles.icon} name="location" size={30} />
             <div>
               <h3 className={styles.infoTitle}>Location</h3>
-              <span>日本</span>
+              <span>Japan</span>
+            </div>
+          </div>
+          <div className={styles.infoItem}>
+            <Icon className={styles.icon} name="phone" size={30} />
+            <div>
+              <h3 className={styles.infoTitle}>Phone</h3>
+              <span></span>
             </div>
           </div>
         </div>

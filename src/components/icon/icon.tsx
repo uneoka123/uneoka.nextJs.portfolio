@@ -8,8 +8,10 @@ import ArrowUp from '@/../public/img/icons/arrow-up.svg';
 import Code from '@/../public/img/icons/code.svg';
 import CSS from '@/../public/img/icons/css.svg';
 import ExternalLink from '@/../public/img/icons/external-link.svg';
+import Express from '@/../public/img/icons/express.svg';
 import Figma from '@/../public/img/icons/figma.svg';
 import Github from '@/../public/img/icons/github.svg';
+import GoogleCloud from '@/../public/img/icons/google-cloud.svg';
 import Gulp from '@/../public/img/icons/gulp.svg';
 import HTML from '@/../public/img/icons/html.svg';
 import JS from '@/../public/img/icons/js.svg';
@@ -30,6 +32,7 @@ import Less from '@/../public/img/icons/less.svg';
 import Linkify from '@/../public/img/icons/linkify.svg';
 import RapidApi from '@/../public/img/icons/rapid-api.svg';
 import SimpleBar from '@/../public/img/icons/simple-bar.svg';
+import Phone from '@/../public/img/icons/phone.svg';
 import Pusher from '@/../public/img/icons/pusher.svg';
 import Python from '@/../public/img/icons/python.svg';
 import Upstash from '@/../public/img/icons/upstash.svg';
@@ -39,6 +42,7 @@ import Tailwindcss1 from '@/../public/img/icons/tailwindcss1.svg';
 import Gsap from '@/../public/img/icons/gsap.svg';
 import Codepen from '@/../public/img/icons/codepen.svg';
 import Prisma from '@/../public/img/icons/prisma.svg';
+import Postgresql from '@/../public/img/icons/postgresql.svg';
 import Stripe from '@/../public/img/icons/stripe.svg';
 import Vue from '@/../public/img/icons/vue.svg';
 import Nuxt from '@/../public/img/icons/nuxt-icon-svgrepo-com.svg';
@@ -66,9 +70,11 @@ const icons: Record<IconName, FC<SVGProps<SVGSVGElement>>> = {
   code: Code,
   css: CSS,
   externalLink: ExternalLink,
+  express: Express,
   figma: Figma,
   github: Github,
   gulp: Gulp,
+  googleCloud: GoogleCloud,
   html: HTML,
   js: JS,
   linkedIn: LinkedIn,
@@ -87,6 +93,8 @@ const icons: Record<IconName, FC<SVGProps<SVGSVGElement>>> = {
   linkify: Linkify,
   'rapid-api': RapidApi,
   'simple-bar': SimpleBar,
+  postgresql: Postgresql,
+  phone: Phone,
   pusher: Pusher,
   python:Python,
   upstash: Upstash,

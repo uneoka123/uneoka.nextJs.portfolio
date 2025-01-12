@@ -15,10 +15,11 @@
 .pc {
   display: block;
   aspect-ratio: 1;
-  
+
   @include media-max(md) {
     margin: 24px auto;
   }
+
   @include media-min(md) {
     align-self: center;
     order: 2;
@@ -29,6 +30,7 @@
   @include media-max(md) {
     margin: 24px auto;
   }
+
   @include media-min(md) {
     align-self: center;
     margin-top: 15%;
@@ -52,4 +54,8 @@
   font-size: 1.2rem;
   line-height: 1.5;
   font-weight: 500;
+
+  span {
+    color: var(--color-accent);
+  }
 }

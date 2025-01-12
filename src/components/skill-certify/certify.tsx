@@ -6,10 +6,10 @@ const Certify = () => {
   return (
     <section id="certifies" className={styles.certify}>
       <h2 className={styles.title}>
-        スキル認証
+        Certifications
       </h2>
       <ul className={styles.list}>
-      <li>
+        <li>
           <img
             src="/img/certify/softwareCertify.png"
             width={550}
@@ -51,10 +51,28 @@ const Certify = () => {
             height={320}
           />
         </li>
+        <li>
+          <img
+            src="/img/certify/goCertify.png"
+            width={550}
+            height={320}
+          />
+        </li>
+        <li>
+          <img
+            src="/img/certify/cppCertify.png"
+            width={550}
+            height={320}
+          />
+        </li>
+        <li>
+          <img
+            src="/img/certify/sqlCertify.png"
+            width={550}
+            height={320}
+          />
+        </li>
       </ul>
-      <Link className={styles.btn} href="/certify">
-        もっと見る
-      </Link>
     </section>
   )
 }

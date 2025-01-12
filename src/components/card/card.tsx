@@ -1,4 +1,6 @@
-import { FC } from 'react';
+'use client';
+
+import { FC, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -8,8 +10,15 @@ import { Icon } from '@/components/icon/icon';
 import { SocialLink } from '@/components/social-link/social-link';
 import styles from './styles.module.scss';
 
+import IconButton from '@mui/material/IconButton';
+
+import { FiChevronRight } from "react-icons/fi";
+import { FiChevronLeft } from "react-icons/fi";
+import { FiExternalLink } from "react-icons/fi";
+
+
 type Props = {
-  img: string;
+  img: string[];
   title: string;
   description: string;
   href?: string;
@@ -25,22 +34,41 @@ const Card: FC<Props> = ({
   githubUrl,
   topics,
 }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextImage = () => {
+    setCurrentIndex((prevIndex: number) => (prevIndex + 1) % img.length);
+  };
+
+  const prevImage = () => {
+    setCurrentIndex((prevIndex: number) => (prevIndex - 1 + img.length) % img.length);
+  };
+
+  // const { img } = images[currentIndex];
+
   return (
     <div className={styles.card}>
-      <Link
+      <div
         className={styles.link_img}
-        href={href ? href : githubUrl}
-        target="_blank"
+        // href={href ? href : githubUrl}
+        // target="_blank"
         rel="noopener noreferrer"
       >
-        <Image
-          className={styles.img}
-          width={650}
-          height={800}
-          src={img}
-          alt={title + 'home page'}
-        />
-      </Link>
+        <div className={styles.sliderContainer}>
+          <Image
+            className={styles.img}
+            width={650}
+            height={300}
+            src={img[currentIndex]}
+            alt={title + 'home page'}
+          // style={{ height: '300px', width: "auto" }}
+          />
+          <div className={styles.navigation}>
+            <IconButton onClick={prevImage} className={styles.button}><FiChevronLeft /></IconButton>
+            <IconButton onClick={nextImage} className={styles.button}><FiChevronRight /></IconButton>
+          </div>
+        </div>
+      </div>
       <div className={styles.content}>
         <div className={styles.content_top}>
           <h3 className={styles.title}>
@@ -50,7 +78,10 @@ const Card: FC<Props> = ({
               target="_blank"
               rel="noopener noreferrer"
             >
-              {title}
+              <div className={styles.title_link}>
+                <span>{title}</span>
+                <FiExternalLink />
+              </div>
             </Link>
           </h3>
         </div>

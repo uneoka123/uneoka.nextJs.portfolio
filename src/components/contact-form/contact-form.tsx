@@ -1,14 +1,16 @@
 'use client';
 
 import { useState } from 'react';
-import { useForm } from 'react-hook-form';
+import { set, useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
 
 import { cn } from '@/helpers/helpers';
-import { sendContactForm } from '@/services/services';
+// import { sendContactForm } from '@/services/services';
 import { Button } from '@/components/button/button';
 import { Spinner } from '@/components/spinner/spinner';
 import styles from './styles.module.scss';
+
+import emailjs from 'emailjs-com';
 
 type FormValues = {
   name: string;
@@ -30,23 +32,49 @@ const ContactForm = () => {
 
   const onSubmit = async (data: FormValues) => {
     setIsLoading(true);
-    
-    try {
-      await sendContactForm({
-        name: data.name,
-        email: data.email,
-        message: data.message,
+
+    const email = process.env.EMAIL;
+    const EMAIL_SERVICE_ID = process.env.EMAIL_SERVICE_ID;
+
+    // try {
+    // await sendContactForm({
+    //   name: data.name,
+    //   email: data.email,
+    //   message: data.message,
+    // });
+    console.log(data);
+
+    const templateParams = {
+      to_email: 'sasakidev581@gmail.com',
+      from_email: data.email,
+      name: data.name,
+      message: data.message,
+    };
+
+    console.log(templateParams);
+
+    emailjs.send(`service_1qgo2mq`, 'template_m610hi5', templateParams, 'NwngRyocFyR8770E6')
+      .then((res) => {
+        setIsLoading(false);
+        console.log(res);
+        toast.success('Email sent successfully!');
+
+      })
+      .catch((error) => {
+        console.log(error);
+        toast.error('Failed to send message!');
+        setIsLoading(false);
       });
-      toast.success('Email sent successfully!');
-      reset();
-    } catch (error) {
-      toast.error('Failed to send message!');
-    }
-    setIsLoading(false);
+
+    reset();
+    // } catch (error) {
+    //   toast.error('Failed to send message!');
+    // }
+    // setIsLoading(false);
   };
 
   return (
-    <form 
+    <form
       className={styles.form}
       spellCheck="false"
       onSubmit={handleSubmit(onSubmit)}
@@ -58,14 +86,14 @@ const ContactForm = () => {
             errors?.name && styles.inputError
           )}
           type="text"
-          placeholder="名前"
+          placeholder="Name"
           {...register('name', {
-            required: 'お名前は必須です。'
+            required: 'Name is required.'
           })}
         />
         {errors?.name && <span className={styles.error}>{errors.name.message}</span>}
       </div>
-      
+
       <div className={styles.field}>
         <input
           className={cn(
@@ -73,9 +101,9 @@ const ContactForm = () => {
             errors?.email && styles.inputError
           )}
           type="email"
-          placeholder="メール"
+          placeholder="Email"
           {...register('email', {
-            required: 'メールは必須です。',
+            required: 'Email is required.',
             pattern: {
               value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
               message: '有効なメールアドレスを入力してください。',
@@ -92,9 +120,9 @@ const ContactForm = () => {
             errors?.message && styles.inputError
           )}
           rows={6}
-          placeholder="メッセージ"
+          placeholder="Message"
           {...register('message', {
-            required: 'メッセージは必須です。'
+            required: 'message is required.'
           })}
         />
         {errors?.message && <span className={styles.error}>{errors.message.message}</span>}
@@ -108,7 +136,7 @@ const ContactForm = () => {
         {isLoading && (
           <Spinner size={12} />
         )}
-        送信
+        send
       </Button>
     </form>
   );

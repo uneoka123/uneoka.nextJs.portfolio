@@ -5,6 +5,7 @@ const sendContactForm = async (data: EmailData) => fetch('/api/send-email', {
   headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
   body: JSON.stringify(data),
 }).then((res) => {
+  console.log(res);
   if (!res.ok) throw new Error('Failed to send message');
   return res.json();
 });

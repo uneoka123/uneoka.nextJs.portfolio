@@ -5,6 +5,7 @@ import { Skill } from '@/common/types/types';
 import { Icon } from '@/components/icon/icon';
 import styles from './styles.module.scss';
 
+
 const About = () => {
   const skills: Skill[] = [
     { title: 'HTML', iconName: 'html', href: 'https://html.spec.whatwg.org/multipage/' },
@@ -19,17 +20,18 @@ const About = () => {
     { title: 'VueJs', iconName: 'vue', href: '/' },
     { title: 'Nuxt', iconName: 'nuxt', href: '/' },
     { title: 'NodeJs', iconName: 'node', href: '/' },
+    { title: 'Express', iconName: 'express', href: 'https://www.expressjs.org/' },
     { title: 'NestJs', iconName: 'nest', href: '/' },
-    { title: 'Laravel', iconName: 'laravel', href: '/' },
+    { title: 'Django', iconName: 'django', href: '/' },
     { title: 'MongoDB', iconName: 'mongoDb', href: '/' },
     { title: 'MySQL', iconName: 'mysql', href: '/' },
+    { title: 'PostgreSQL', iconName: 'postgresql', href: '/' },
     { title: 'Langchain', iconName: 'langchain', href: '/' },
     { title: 'ChatGPT', iconName: 'chatgpt', href: '/' },
     { title: 'Pinecone', iconName: 'pinecone', href: '/' },
-    { title: 'Wordpress', iconName: 'wordpress', href: '/' },
-    { title: 'Shopify', iconName: 'shopify', href: '/' },
     { title: 'Amazon Web Service', iconName: 'aws', href: '/' },
     { title: 'Azure', iconName: 'azure', href: '/' },
+    { title: 'Google Cloude Platform', iconName: 'googleCloud', href: '/' },
     { title: 'Firebase', iconName: 'firebase', href: '/' },
     { title: 'Git', iconName: 'git', href: '/' },
     { title: 'Gulp', iconName: 'gulp', href: 'https://gulpjs.com/' },
@@ -42,25 +44,26 @@ const About = () => {
         <Image
           className={styles.img}
           src="/img/about.png"
-          width={550}
-          height={320}
-          alt="Picture with characters from anime and video games"
+          width={400}
+          height={100}
+          alt="Your photo"
         />
-
         <div className={styles.content}>
-          <h2 className={styles.title}>自己紹介</h2>
+          <h2 className={styles.title}>About Me</h2>
           <p className={styles.text}>
-            <span>こんにちは！</span><br/>
-            完全にレスポンシブでユーザー中心のウェブサイトやシステム、AIプロジェクトの制作に情熱を注いでいるソリューション重視のエンジニアです。
-            <span>JavaScript</span>、<span>TypeScript</span>、<span>Python</span>、<span>PHP</span>などのプログラミング言語やフレームワークに精通しています。<br/>
-            現在は<span>React</span>、<span>Next.js</span>、<span>TypeScript</span>、<span>Node.js</span>、<span>ChatGPT-4o</span>に深く関わり、限界を広げることに取り組んでいます。
-            技術を磨き、常に進化する業界のトレンドに遅れないよう努力し続けています。
+            I possess strong proficiency in modern web programming languages, including <span>JavaScript</span>, <span>TypeScript</span>,
+            <span>Python</span>, <span>React</span>, <span>Next.js</span>, <span>Vue.js</span>, <span>Node.js</span>, <span>Nest.js</span>,
+            and <span>Django</span>, as well as <span>AI</span> application development frameworks like <span>LangChain</span>.<br />
+            I excel at collaborating with cross-functional teams to define project requirements, design architecture, and execute full-stack
+            development projects from conception to deployment.<br />
+            Passionate about emerging technologies, I continually seek opportunities to enhance coding practices and software functionality.<br />
+            I am committed to fostering a culture of learning and mentoring within teams to elevate our collective technical expertise.
           </p>
         </div>
       </div>
 
       <div className={styles.skills}>
-        <h3 className={styles.skillsTitle}>スキル</h3>
+        <h3 className={styles.skillsTitle}>Skills</h3>
         <ul className={styles.skillsList}>
           {skills.map(skill => (
             <li key={skill.title}>
