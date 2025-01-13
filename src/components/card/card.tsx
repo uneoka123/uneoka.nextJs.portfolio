@@ -1,6 +1,6 @@
 'use client';
 
-import { FC, useState } from 'react';
+import { FC, useState, ReactNode } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -20,7 +20,7 @@ import { FiExternalLink } from "react-icons/fi";
 type Props = {
   img: string[];
   title: string;
-  description: string;
+  description: ReactNode;
   href?: string;
   githubUrl: string;
   topics?: IconName[];
@@ -89,7 +89,7 @@ const Card: FC<Props> = ({
         <div className={styles.topics}>
           {topics?.map((topic) => (
             <div key={topic} title={topic}>
-              <Icon name={topic} />
+              <Icon name={topic} size={24}/>
             </div>
           ))}
         </div>

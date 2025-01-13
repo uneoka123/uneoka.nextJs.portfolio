@@ -3,6 +3,8 @@ type IconName =
   | 'bot'
   | 'code'
   | 'css'
+  | 'claude'
+  | 'discord'
   | 'externalLink'
   | 'express'
   | 'figma'

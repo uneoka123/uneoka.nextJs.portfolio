@@ -1,7 +1,15 @@
+'use client';
+
+import { useEffect } from 'react';
 import { PC } from '@/components/pc/pc';
 import styles from './styles.module.scss';
+import { renderCanvas } from './renderCanvas';
 
 const Intro = () => {
+  useEffect(() => {
+    renderCanvas();
+  }, []);
+
   return (
     <section id="home" className={styles.intro}>
       <PC className={styles.pc} />
@@ -19,6 +27,7 @@ const Intro = () => {
           I hope you enjoy my portfolio.
         </p>
       </div>
+      <canvas className={styles.canvas} id="canvas"></canvas>
     </section>
   );
 };

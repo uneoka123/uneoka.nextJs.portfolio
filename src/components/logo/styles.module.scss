@@ -6,7 +6,9 @@
   font-size: 1.7rem;
   font-weight: 700;
   line-height: 1;
-  transform: skewX(-10deg);
+  // transform: skewX(-10deg);
+
+  border-radius: 10px;
 
   span::first-letter {
     color: var(--color-accent);

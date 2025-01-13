@@ -28,6 +28,7 @@ const About = () => {
     { title: 'PostgreSQL', iconName: 'postgresql', href: '/' },
     { title: 'Langchain', iconName: 'langchain', href: '/' },
     { title: 'ChatGPT', iconName: 'chatgpt', href: '/' },
+    { title: 'Claude', iconName: 'claude', href: '/' },
     { title: 'Pinecone', iconName: 'pinecone', href: '/' },
     { title: 'Amazon Web Service', iconName: 'aws', href: '/' },
     { title: 'Azure', iconName: 'azure', href: '/' },
@@ -43,8 +44,8 @@ const About = () => {
       <div className={styles.wrapper}>
         <Image
           className={styles.img}
-          src="/img/about.png"
-          width={400}
+          src="/img/about1.png"
+          width={500}
           height={100}
           alt="Your photo"
         />

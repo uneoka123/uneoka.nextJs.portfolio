@@ -5,6 +5,7 @@ import { Portfolio } from '@/components/portfolio/portfolio';
 import { Contacts } from '@/components/contacts/contacts';
 import styles from './styles.module.scss';
 
+
 const Home = () => {
   return (
     <div className={styles.container}>

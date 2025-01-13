@@ -7,11 +7,13 @@ import styles from './styles.module.scss';
 import ArrowUp from '@/../public/img/icons/arrow-up.svg';
 import Code from '@/../public/img/icons/code.svg';
 import CSS from '@/../public/img/icons/css.svg';
+import Claude from '@/../public/img/icons/claude-ai.svg';
+import Discord from '@/../public/img/icons/discord.svg';
 import ExternalLink from '@/../public/img/icons/external-link.svg';
 import Express from '@/../public/img/icons/express.svg';
 import Figma from '@/../public/img/icons/figma.svg';
 import Github from '@/../public/img/icons/github.svg';
-import GoogleCloud from '@/../public/img/icons/google-cloud.svg';
+import GoogleCloud from '@/../public/img/icons/google-cloud-1.svg';
 import Gulp from '@/../public/img/icons/gulp.svg';
 import HTML from '@/../public/img/icons/html.svg';
 import JS from '@/../public/img/icons/js.svg';
@@ -66,9 +68,11 @@ import Git from '@/../public/img/icons/git-icon.svg';
 
 const icons: Record<IconName, FC<SVGProps<SVGSVGElement>>> = {
   arrowUp: ArrowUp,
-  bot:Bot,
+  bot: Bot,
   code: Code,
   css: CSS,
+  claude: Claude,
+  discord: Discord,
   externalLink: ExternalLink,
   express: Express,
   figma: Figma,
@@ -96,33 +100,33 @@ const icons: Record<IconName, FC<SVGProps<SVGSVGElement>>> = {
   postgresql: Postgresql,
   phone: Phone,
   pusher: Pusher,
-  python:Python,
+  python: Python,
   upstash: Upstash,
   redis: Redis,
   tailwindcss: Tailwindcss,
-  tailwindcss1:Tailwindcss1,
+  tailwindcss1: Tailwindcss1,
   'green-sock': Gsap,
   codepen: Codepen,
   prisma: Prisma,
   stripe: Stripe,
-  vue:Vue,
-  nuxt:Nuxt,
-  node:Node,
-  nest:Nest,
-  django:Django,
-  laravel:Laravel,
-  wordpress:Wordpress,
-  shopify:Shopify,
-  mongoDb:MongoDB,
-  mysql:MySQL,
-  mariadb:MariaDB,
-  firebase:Firebase,
-  chatgpt:ChatGPT,
-  pinecone:Pinecone,
-  langchain:Langchain,
-  aws:AWS,
-  azure:Azure,
-  git:Git
+  vue: Vue,
+  nuxt: Nuxt,
+  node: Node,
+  nest: Nest,
+  django: Django,
+  laravel: Laravel,
+  wordpress: Wordpress,
+  shopify: Shopify,
+  mongoDb: MongoDB,
+  mysql: MySQL,
+  mariadb: MariaDB,
+  firebase: Firebase,
+  chatgpt: ChatGPT,
+  pinecone: Pinecone,
+  langchain: Langchain,
+  aws: AWS,
+  azure: Azure,
+  git: Git
 };
 
 type Props = SVGProps<SVGSVGElement> & {

@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -14,7 +14,7 @@ import { FiExternalLink } from "react-icons/fi";
 type Props = {
   video: string;
   title: string;
-  description: string;
+  description: ReactNode;
   href?: string;
   githubUrl: string;
   topics?: IconName[];

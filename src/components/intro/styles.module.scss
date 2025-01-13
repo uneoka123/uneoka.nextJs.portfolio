@@ -59,3 +59,14 @@
     color: var(--color-accent);
   }
 }
+
+.canvas {
+  // background-color: #f3f4f6;
+  /* Replace this with your specific color */
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
