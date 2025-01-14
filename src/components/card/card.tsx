@@ -7,10 +7,7 @@ import Image from 'next/image';
 import { cn } from '@/helpers/helpers';
 import { IconName } from '@/common/types/types';
 import { Icon } from '@/components/icon/icon';
-import { SocialLink } from '@/components/social-link/social-link';
 import styles from './styles.module.scss';
-
-import IconButton from '@mui/material/IconButton';
 
 import { FiChevronRight } from "react-icons/fi";
 import { FiChevronLeft } from "react-icons/fi";
@@ -64,8 +61,8 @@ const Card: FC<Props> = ({
           // style={{ height: '300px', width: "auto" }}
           />
           <div className={styles.navigation}>
-            <IconButton onClick={prevImage} className={styles.button}><FiChevronLeft /></IconButton>
-            <IconButton onClick={nextImage} className={styles.button}><FiChevronRight /></IconButton>
+            <button onClick={prevImage} className={styles.button}><FiChevronLeft /></button>
+            <button onClick={nextImage} className={styles.button}><FiChevronRight /></button>
           </div>
         </div>
       </div>

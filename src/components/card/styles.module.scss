@@ -91,6 +91,12 @@
       margin: 0 5px;
       border-radius: 5px;
       z-index: 8888;
+      transition: background-color 0.5s;
+      /* Add this to transition effect */
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.5);
+      }
     }
   }
 }
@@ -134,7 +140,8 @@
 .title_link {
   @include link-hover(var(--color-accent), left);
   margin-right: 10px;
-  div{
+
+  div {
     display: flex;
     justify-content: center;
     gap: 5px;
