@@ -9,6 +9,7 @@ import Code from '@/../public/img/icons/code.svg';
 import CSS from '@/../public/img/icons/css.svg';
 import Claude from '@/../public/img/icons/claude-ai.svg';
 import Discord from '@/../public/img/icons/discord.svg';
+import Docker from '@/../public/img/icons/docker.svg';
 import ExternalLink from '@/../public/img/icons/external-link.svg';
 import Express from '@/../public/img/icons/express.svg';
 import Figma from '@/../public/img/icons/figma.svg';
@@ -32,6 +33,7 @@ import GoogleMaps from '@/../public/img/icons/google-maps.svg';
 import Jinja from '@/../public/img/icons/jinja.svg';
 import Less from '@/../public/img/icons/less.svg';
 import Linkify from '@/../public/img/icons/linkify.svg';
+import Nginx from '@/../public/img/icons/nginx.svg';
 import RapidApi from '@/../public/img/icons/rapid-api.svg';
 import SimpleBar from '@/../public/img/icons/simple-bar.svg';
 import Phone from '@/../public/img/icons/phone.svg';
@@ -73,6 +75,7 @@ const icons: Record<IconName, FC<SVGProps<SVGSVGElement>>> = {
   css: CSS,
   claude: Claude,
   discord: Discord,
+  docker: Docker,
   externalLink: ExternalLink,
   express: Express,
   figma: Figma,
@@ -95,6 +98,7 @@ const icons: Record<IconName, FC<SVGProps<SVGSVGElement>>> = {
   jinja: Jinja,
   less: Less,
   linkify: Linkify,
+  nginx: Nginx,
   'rapid-api': RapidApi,
   'simple-bar': SimpleBar,
   postgresql: Postgresql,

@@ -32,22 +32,12 @@ const ContactForm = () => {
 
   const onSubmit = async (data: FormValues) => {
     setIsLoading(true);
-
-    const email = process.env.EMAIL;
-    const EMAIL_SERVICE_ID = process.env.EMAIL_SERVICE_ID;
-
-    // try {
-    // await sendContactForm({
-    //   name: data.name,
-    //   email: data.email,
-    //   message: data.message,
-    // });
     console.log(data);
 
     const templateParams = {
-      to_email: 'sasakidev581@gmail.com',
+      to_email: 'uneoka.k0114@gmail.com',
       from_email: data.email,
-      name: data.name,
+      from_name: data.name,
       message: data.message,
     };
 
@@ -86,7 +76,7 @@ const ContactForm = () => {
             errors?.name && styles.inputError
           )}
           type="text"
-          placeholder="Name"
+          placeholder="Please input your name"
           {...register('name', {
             required: 'Name is required.'
           })}
@@ -101,12 +91,12 @@ const ContactForm = () => {
             errors?.email && styles.inputError
           )}
           type="email"
-          placeholder="Email"
+          placeholder="Please input your email"
           {...register('email', {
             required: 'Email is required.',
             pattern: {
               value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-              message: '有効なメールアドレスを入力してください。',
+              message: 'Please input invalid email address.',
             },
           })}
         />

@@ -11,12 +11,12 @@ const Portfolio = () => {
       <ul className={styles.list}>
         <li>
           <Card
-            img={['/img/works/2-1.PNG', '/img/works/2-2.PNG', '/img/works/2-5.PNG', '/img/works/2-3.PNG', '/img/works/2-4.PNG']}
+            img={['/img/works/2-1.png', '/img/works/2-2.PNG', '/img/works/2-5.PNG', '/img/works/2-3.PNG', '/img/works/2-4.PNG']}
             title="Brand Site of IG Securities Co., Ltd."
             description={
               <>
                 - Developed using React and TailwindCSS in collaboration with a designer <br />
-                - Updated Some UI
+                - Fixed more than 20 issues
               </>
             }
             href="https://ig-brand.jp/"
@@ -26,7 +26,7 @@ const Portfolio = () => {
         </li>
         <li>
           <Card
-            img={['/img/works/3-1.png', '/img/works/3-3.png', '/img/works/3-2.png', '/img/works/3-4.PNG', '/img/works/3-5.PNG']}
+            img={['/img/works/3-1.png', '/img/works/3-3.png', '/img/works/3-2.PNG', '/img/works/3-4.PNG', '/img/works/3-5.PNG']}
             title="Image Generator"
             description={
               <>
@@ -107,7 +107,7 @@ const Portfolio = () => {
                 - Developed NLP chatbot using react, node.js, LangChain, Pinecone, Claude for Shopping<br />
                 - Deploy this chatbot on AWS<br />
                 - Integrated it to Shopify site<br />
-                - Fixed more than 30 issues<br />
+                - Increased user count by 150%<br />
                 - Updated some UI
               </>
             }
@@ -124,7 +124,8 @@ const Portfolio = () => {
             title="Website of Holland International School(HIS)"
             description={
               <>
-                - Developed using React and TailwindCSS in collaboration with a designer <br />
+                - Developed backend using Django <br />
+                - Integrated 5+ APIs <br />
                 - Updated Some UI
               </>
             }
@@ -135,19 +136,18 @@ const Portfolio = () => {
         </li>
         <li>
           <Card
-            img={['/img/works/3-1.png', '/img/works/3-3.png', '/img/works/3-2.png', '/img/works/3-4.PNG', '/img/works/3-5.PNG']}
-            title="Image Generator"
+            img={['/img/works/5-6.png', '/img/works/5-2.PNG', '/img/works/5-3.PNG', '/img/works/5-4.png', '/img/works/5-5.png']}
+            title="Online Real Estate Platform"
             description={
               <>
-                I have created a high quality, customized image generator.<br />
-                - Built with Next.js and Tailwind CSS for a responsive and engaging design<br />
-                - Developed Text to Image function using DALL-e<br />
+                - Simplified the process of buying, selling, and renting real estate by providing a user-friendly interface and a variety of search tools<br />
+                - Integrated payment APIs and Rest API<br />
                 - Fixed more than 20 issues<br />
               </>
             }
             href="https://idolly.ai/"
             githubUrl=""
-            topics={['nextjs', 'typescript', 'mongoDb', 'tailwindcss', 'chatgpt']}
+            topics={['nextjs', 'typescript', 'tailwindcss', 'nest', 'mysql', 'nginx']}
           />
         </li>
       </ul>

@@ -33,11 +33,14 @@ const About = () => {
     { title: 'Amazon Web Service', iconName: 'aws', href: '/' },
     { title: 'Azure', iconName: 'azure', href: '/' },
     { title: 'Google Cloude Platform', iconName: 'googleCloud', href: '/' },
+    { title: 'Niginx', iconName: 'nginx', href: '/' },
     { title: 'Firebase', iconName: 'firebase', href: '/' },
+    { title: 'Docker', iconName: 'docker', href: '' },
     { title: 'Git', iconName: 'git', href: '/' },
     { title: 'Gulp', iconName: 'gulp', href: 'https://gulpjs.com/' },
     { title: 'Figma', iconName: 'figma', href: 'https://www.figma.com/' },
   ];
+
 
   return (
     <section id="about" className={styles.about}>

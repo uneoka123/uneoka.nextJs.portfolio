@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 import styles from './styles.module.scss';
 
@@ -10,64 +11,73 @@ const Certify = () => {
       </h2>
       <ul className={styles.list}>
         <li>
-          <img
+          <Image
             src="/img/certify/softwareCertify.png"
+            alt='softwareCertify'
             width={550}
             height={320}
           />
         </li>
         <li>
-          <img
+          <Image
             src="/img/certify/frontendCertify.png"
+            alt='frontendCertify'
             width={550}
             height={320}
           />
         </li>
         <li>
-          <img
+          <Image
             src="/img/certify/nodeCertify.png"
+            alt='nodeCertify'
             width={550}
             height={320}
           />
         </li>
         <li>
-          <img
+          <Image
             src="/img/certify/restfullCertify.png"
+            alt='restfullCertify'
             width={550}
             height={320}
           />
         </li>
         <li>
-          <img
+          <Image
             src="/img/certify/JavascriptCertify.png"
+            alt='JavascriptCertify'
             width={550}
             height={320}
           />
         </li>
         <li>
-          <img
+          <Image
             src="/img/certify/pythonCertify.png"
+            alt='pythonCertify'
             width={550}
             height={320}
           />
         </li>
         <li>
-          <img
+          <Image
             src="/img/certify/goCertify.png"
+            alt='goCertify'
             width={550}
             height={320}
           />
         </li>
         <li>
-          <img
+          <Image
             src="/img/certify/cppCertify.png"
+            alt='cppCertify'
             width={550}
             height={320}
           />
         </li>
         <li>
-          <img
+          <Image
             src="/img/certify/sqlCertify.png"
+            alt='sqlCertify'
             width={550}
             height={320}
           />

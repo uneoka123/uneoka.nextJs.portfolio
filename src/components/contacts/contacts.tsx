@@ -20,10 +20,11 @@ const Contacts = () => {
               <h3 className={styles.infoTitle}>Mail</h3>
               <Link
                 className={styles.link}
-                href="mailto:nailheart4@gmail.com"
+                href="mailto:uneoka.k0114@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
+                uneoka.k0114@gmail.com
               </Link>
             </div>
           </div>

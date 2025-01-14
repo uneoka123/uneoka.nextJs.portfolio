@@ -19,7 +19,7 @@ const Footer = () => {
             Made with<span className={styles.heart}>&#10084;</span> by&nbsp;
           </span>
           <button className={styles.name} onClick={handleScrollToTop}>
-            Uneoka&nbsp;Kenta
+            Kenta&nbsp;Uneoka
             <Icon
               className={styles.icon}
               name="rocket"
