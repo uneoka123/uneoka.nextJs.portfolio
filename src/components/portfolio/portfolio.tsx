@@ -45,43 +45,6 @@ const Portfolio = () => {
       <ul className={styles.list}>
         <li>
           <VideoCard
-            video='/img/works/m2.mp4'
-            title='NLP Chatbot'
-            description={
-              <>
-                Released the MVP of our NLP chatbot.<br />
-                - Integrated Pinecone API, OpenAI API and Rest API<br />
-                - When uploading a document, the data is read and stored as metadata in Pinecone<br />
-                - Use LangChain to embed metadata into ChatGPT and then generate accurate answers<br />
-                - Improve response accuracy to over 95% using prompt engineering<br />
-              </>
-            }
-            href='https://chat.chatgptdemo.net/'
-            githubUrl=''
-            topics={['react', 'tailwindcss', 'django', 'mysql', 'chatgpt', 'langchain', 'pinecone']}
-          />
-        </li>
-        <li>
-          <VideoCard
-            video='/img/works/Eldoah.mp4'
-            title='Discord Bot App'
-            description={
-              <>
-                An app that analyzes betting results from betting sites and delivers them to Discord.<br />
-                - Obtained betting results using web scraping<br />
-                - Analyzed betting results in backend<br />
-                - Delivered betting results to Discord using Discord API<br />
-              </>
-            }
-            href='https://www.eldoah.com/'
-            githubUrl=''
-            topics={['python', 'discord', 'bot']}
-          />
-        </li>
-      </ul>
-      <ul className={styles.list}>
-        <li>
-          <VideoCard
             video='/img/works/round.mp4'
             title='Online Meeting System'
             description={
@@ -100,6 +63,26 @@ const Portfolio = () => {
         </li>
         <li>
           <VideoCard
+            video='/img/works/m2.mp4'
+            title='NLP Chatbot'
+            description={
+              <>
+                Released the MVP of our NLP chatbot.<br />
+                - Integrated Pinecone API, OpenAI API and Rest API<br />
+                - When uploading a document, the data is read and stored as metadata in Pinecone<br />
+                - Use LangChain to embed metadata into ChatGPT and then generate accurate answers<br />
+                - Improve response accuracy to over 95% using prompt engineering<br />
+              </>
+            }
+            href='https://chat.chatgptdemo.net/'
+            githubUrl=''
+            topics={['react', 'tailwindcss', 'django', 'mysql', 'chatgpt', 'langchain', 'pinecone']}
+          />
+        </li>
+      </ul>
+      <ul className={styles.list}>
+        <li>
+          <VideoCard
             video='/img/works/fashon.part.mp4'
             title='NLP Chatbot'
             description={
@@ -114,6 +97,23 @@ const Portfolio = () => {
             href='https://fashionspark.com/'
             githubUrl=''
             topics={['react', 'typescript', 'tailwindcss', 'node', 'langchain', 'claude', 'pinecone', 'aws']}
+          />
+        </li>
+        <li>
+          <VideoCard
+            video='/img/works/Eldoah.mp4'
+            title='Discord Bot App'
+            description={
+              <>
+                An app that analyzes betting results from betting sites and delivers them to Discord.<br />
+                - Obtained betting results using web scraping<br />
+                - Analyzed betting results in backend<br />
+                - Delivered betting results to Discord using Discord API<br />
+              </>
+            }
+            href='https://www.eldoah.com/'
+            githubUrl=''
+            topics={['python', 'discord', 'bot']}
           />
         </li>
       </ul>

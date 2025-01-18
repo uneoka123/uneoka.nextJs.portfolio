@@ -35,7 +35,7 @@ const ContactForm = () => {
     console.log(data);
 
     const templateParams = {
-      to_email: 'uneoka.k0114@gmail.com',
+      to_email: 'pro.guru0114@gmail.com',
       from_email: data.email,
       from_name: data.name,
       message: data.message,

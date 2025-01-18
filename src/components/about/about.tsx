@@ -45,7 +45,7 @@ const About = () => {
   return (
     <section id="about" className={styles.about}>
       <div className={styles.wrapper}>
-        <img
+        <Image
           className={styles.img}
           src="/img/about1.png"
           width={500}

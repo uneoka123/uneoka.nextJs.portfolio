@@ -1,0 +1,41 @@
+@use "@/scss/mixins" as *;
+
+.content{
+  position: fixed;
+  margin-top: 83vh;
+  margin-left: 90vw;
+  z-index: 100;
+  .button {
+    margin-top: 10px;
+    border-radius: 50%;
+    background-color: var(--color-accent);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out; /* Transition animation when hovered */
+    &:hover {
+      transform: scale(1.1); /* Scale the icon 1.2 times its original size */
+      opacity: 0.8;
+    }
+  }
+  .icon {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out; /* Transition animation when hovered */
+
+    &:hover {
+      transform: scale(1.1); /* Scale the icon 1.2 times its original size */
+    }
+  }
+}
+
+.chatbot {
+  border: none;
+  overflow: hidden;
+  border-radius: 5px;
+  width: 400px;
+  height: 500px;
+  border: 1px solid #e2e8f1;
+  position: absolute; /* Position the iframe absolutely */
+  top: -500px;  /* Adjust this value to position it above the icon */
+  left: -300px;  /* Center it horizontally */
+}

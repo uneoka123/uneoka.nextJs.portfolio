@@ -11,7 +11,7 @@ const Home = () => {
     <div className={styles.container}>
       <Intro />
       <About />
-      <Certify/>
+      <Certify />
       <Portfolio />
       <Contacts />
     </div>

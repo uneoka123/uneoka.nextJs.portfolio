@@ -5,6 +5,7 @@ import { Nunito } from 'next/font/google';
 import { Toast } from '@/components/toast/toast';
 import { Header } from '@/components/header/header';
 import { Footer } from '@/components/footer/footer';
+import { ChatBot } from '@/components/chatbot/chatbot';
 import '@/scss/style.scss';
 
 const nunito = Nunito({ subsets: ['latin'] });
@@ -49,6 +50,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <main>{children}</main>
         <Footer />
         <Toast />
+        <ChatBot />
       </body>
     </html>
   );
