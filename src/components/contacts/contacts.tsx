@@ -39,7 +39,7 @@ const Contacts = () => {
             <Icon className={styles.icon} name="phone" size={30} />
             <div>
               <h3 className={styles.infoTitle}>Phone</h3>
-              <span></span>
+              <span>+818023631377</span>
             </div>
           </div>
         </div>
