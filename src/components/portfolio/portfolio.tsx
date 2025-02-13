@@ -16,6 +16,7 @@ const Portfolio = () => {
             description={
               <>
                 - Developed using React and TailwindCSS in collaboration with a designer <br />
+                - Revenue increased by 27% <br />
                 - Fixed more than 20 issues
               </>
             }
@@ -30,7 +31,6 @@ const Portfolio = () => {
             title="Image Generator"
             description={
               <>
-                I have created a high quality, customized image generator.<br />
                 - Built with Next.js and Tailwind CSS for a responsive and engaging design<br />
                 - Developed Text to Image function using DALL-e<br />
                 - Fixed more than 20 issues<br />
@@ -49,9 +49,9 @@ const Portfolio = () => {
             title='Online Meeting System'
             description={
               <>
-                - Implement real-time video meeting function using Web RTC<br />
-                - Implement real-time chat using Web Socket<br />
-                - ​​Implement Auth function using Firebase Authentication<br />
+                - Implemented real-time video meeting function using Web RTC<br />
+                - Implemented real-time chat using Web Socket<br />
+                - ​​Implemented Auth function using Firebase Authentication<br />
                 - Fixed more than 40 issues<br />
                 - Updated some UI
               </>
@@ -69,9 +69,9 @@ const Portfolio = () => {
               <>
                 Released the MVP of our NLP chatbot.<br />
                 - Integrated Pinecone API, OpenAI API and Rest API<br />
-                - When uploading a document, the data is read and stored as metadata in Pinecone<br />
-                - Use LangChain to embed metadata into ChatGPT and then generate accurate answers<br />
-                - Improve response accuracy to over 95% using prompt engineering<br />
+                - Uploading a document, the data was read and stored as metadata in Pinecone<br />
+                - Embed metadata into ChatGPT using LangChain and then generated accurate answers<br />
+                - Enhanced response accuracy to over 95% using prompt engineering<br />
               </>
             }
             href='https://chat.chatgptdemo.net/'
@@ -88,10 +88,10 @@ const Portfolio = () => {
             description={
               <>
                 - Developed NLP chatbot using react, node.js, LangChain, Pinecone, Claude for Shopping<br />
-                - Deploy this chatbot on AWS<br />
+                - Deployed this chatbot on AWS<br />
                 - Integrated it to Shopify site<br />
-                - Increased user count by 150%<br />
-                - Updated some UI
+                - Enhanced user experience by providing quick and accurate responses. <br />
+                - Site usage Increased by 50% <br />
               </>
             }
             href='https://fashionspark.com/'
@@ -102,13 +102,13 @@ const Portfolio = () => {
         <li>
           <VideoCard
             video='/img/works/Eldoah.mp4'
-            title='Discord Bot App'
+            title='Discord Bot'
             description={
               <>
-                An app that analyzes betting results from betting sites and delivers them to Discord.<br />
                 - Obtained betting results using web scraping<br />
                 - Analyzed betting results in backend<br />
                 - Delivered betting results to Discord using Discord API<br />
+                - Increased profits by 43% with a real-time information based betting strategies
               </>
             }
             href='https://www.eldoah.com/'

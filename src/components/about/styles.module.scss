@@ -17,7 +17,7 @@
 .img {
   margin-left: auto;
   margin-right: auto;
-  object-fit: cover; 
+  object-fit: cover;
   border-radius: 20px;
 }
 
@@ -35,6 +35,9 @@
 
   span {
     color: var(--color-accent);
+  }
+  p{
+    margin-bottom: 10px;
   }
 }
 

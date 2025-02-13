@@ -126,7 +126,7 @@ const ContactForm = () => {
         {isLoading && (
           <Spinner size={12} />
         )}
-        send
+        Send
       </Button>
     </form>
   );

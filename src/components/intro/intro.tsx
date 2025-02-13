@@ -22,9 +22,6 @@ const Intro = () => {
         </h1>
         <p className={styles.text}>
           I am an innovative <span>AI</span> and <span>full-stack</span> engineer with 8 years of extensive experience in developing robust and scalable <span>web systems</span>, particularly in Natural Language Processing <span>(NLP)</span>.<br />
-          This is my small portfolio site.<br />
-          Thank you for visiting.<br />
-          I hope you enjoy my portfolio.
         </p>
       </div>
       <canvas className={styles.canvas} id="canvas"></canvas>

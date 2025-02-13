@@ -47,22 +47,30 @@ const About = () => {
       <div className={styles.wrapper}>
         <Image
           className={styles.img}
-          src="/img/about1.png"
+          src="/img/about1.jpg"
           width={500}
           height={100}
           alt="Your photo"
         />
         <div className={styles.content}>
           <h2 className={styles.title}>About Me</h2>
-          <p className={styles.text}>
-            I possess strong proficiency in modern web programming languages, including <span>JavaScript</span>, <span>TypeScript</span>,
-            <span>Python</span>, <span>React</span>, <span>Next.js</span>, <span>Vue.js</span>, <span>Node.js</span>, <span>Nest.js</span>,
-            and <span>Django</span>, as well as <span>AI</span> application development frameworks like <span>LangChain</span>.<br />
-            I excel at collaborating with cross-functional teams to define project requirements, design architecture, and execute full-stack
-            development projects from conception to deployment.<br />
-            Passionate about emerging technologies, I continually seek opportunities to enhance coding practices and software functionality.<br />
-            I am committed to fostering a culture of learning and mentoring within teams to elevate our collective technical expertise.
-          </p>
+          <div className={styles.text}>
+            <p>
+              I possess strong proficiency in modern web programming languages, including <span>JavaScript</span>, <span>TypeScript</span>,
+              <span>Python</span>, <span>React</span>, <span>Next.js</span>, <span>Vue.js</span>, <span>Node.js</span>, <span>Nest.js</span>,
+              and <span>Django</span>, as well as <span>AI</span> application development frameworks like <span>LangChain</span>.<br />
+            </p>
+            <p>
+              I excel at collaborating with cross-functional teams to define project requirements, design architecture, and execute full-stack
+              development projects from conception to deployment.<br />
+            </p>
+            <p>
+              Passionate about emerging technologies, I continually seek opportunities to enhance coding practices and software functionality.<br />
+            </p>
+            <p>
+              I am committed to fostering a culture of learning and mentoring within teams to elevate our collective technical expertise.
+            </p>
+          </div>
         </div>
       </div>
 

@@ -32,50 +32,44 @@ const Contacts = () => {
             <Icon className={styles.icon} name="location" size={30} />
             <div>
               <h3 className={styles.infoTitle}>Location</h3>
-              <span>Japan</span>
+              <span>Saitama Japan</span>
             </div>
           </div>
           <div className={styles.infoItem}>
             <Icon className={styles.icon} name="phone" size={30} />
             <div>
               <h3 className={styles.infoTitle}>Phone</h3>
-              <span>+818023631377</span>
+              <span>+15856016175</span>
             </div>
           </div>
         </div>
 
-        {/* <div className={styles.social}>
+        <div className={styles.social}>
           <SocialLink
             className={styles.socialLink}
-            href=""
+            href="https://github.com/uneoka0114"
             iconName="github"
             title="github"
           />
-          <SocialLink
+          {/* <SocialLink
             className={styles.socialLink}
             href=""
             iconName="skype"
             title="skype"
-          />
+          /> */}
           <SocialLink
             className={styles.socialLink}
-            href="https://www.linkedin.com/in/yaroslav-lebedenko-9b1bb7233/"
+            href=""
             iconName="linkedIn"
             title="linkedIn"
           />
-          <SocialLink
+          {/* <SocialLink
             className={styles.socialLink}
-            href="https://t.me/Nailheart"
-            iconName="telegram"
-            title="telegram"
-          />
-          <SocialLink
-            className={styles.socialLink}
-            href="https://codepen.io/Nailheart"
+            href="https://codepen.io/uneoka0114"
             iconName="codepen"
             title="codepen"
-          />
-        </div> */}
+          /> */}
+        </div>
       </div>
       <ContactForm />
     </section>
