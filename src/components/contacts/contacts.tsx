@@ -59,7 +59,7 @@ const Contacts = () => {
           /> */}
           <SocialLink
             className={styles.socialLink}
-            href=""
+            href="https://www.linkedin.com/in/uneoka-kenta"
             iconName="linkedIn"
             title="linkedIn"
           />
