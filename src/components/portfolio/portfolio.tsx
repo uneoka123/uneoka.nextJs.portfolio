@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Card } from '@/components/card/card';
 import { VideoCard } from '@/components/videocard/videocard';
 import styles from './styles.module.scss';
@@ -58,7 +59,7 @@ const Portfolio = () => {
             }
             href='https://www.around.co/'
             githubUrl=''
-            topics={['react', 'node', 'firebase', 'figma']}
+            topics={['react', 'typescript', 'node', 'aws', 'nginx', 'firebase', 'figma']}
           />
         </li>
         <li>
@@ -120,6 +121,39 @@ const Portfolio = () => {
       <ul className={styles.list}>
         <li>
           <Card
+            img={['/img/works/6-1.PNG', '/img/works/6-2.PNG', '/img/works/6-3.PNG', '/img/works/6-4.PNG']}
+            title="Rusty Flip Game"
+            description={
+              <>
+                - Developed Frontend using Next.js <br />
+                - Integrated 4 APIs <br />
+                - Fixed 15+ issues
+              </>
+            }
+            href="https://rustyflip-game.onrender.com/"
+            githubUrl="https://github.com/uneoka0114/rustyflip_game"
+            topics={['nextjs', 'typescript', 'tailwindcss']}
+          />
+        </li>
+        <li>
+          <Card
+            img={['/img/works/8-1.gif', '/img/works/8-2.jpg', '/img/works/8-4.png']}
+            title="Ninja Cut Game"
+            description={
+              <>
+                - Developed this game <br />
+                - Fixed more than 10 issues<br />
+              </>
+            }
+            href="ninja-cut-game.vercel.app"
+            githubUrl=""
+            topics={['html', 'css', 'js']}
+          />
+        </li>
+      </ul>
+      <ul className={styles.list}>
+        <li>
+          <Card
             img={['/img/works/4-1.png', '/img/works/4-3.png', '/img/works/4-4.png', '/img/works/4-5.png']}
             title="Website of Holland International School(HIS)"
             description={
@@ -145,12 +179,15 @@ const Portfolio = () => {
                 - Fixed more than 20 issues<br />
               </>
             }
-            href="https://idolly.ai/"
+            href="https://www.nawy.com/"
             githubUrl=""
             topics={['nextjs', 'typescript', 'tailwindcss', 'nest', 'mysql', 'nginx']}
           />
         </li>
       </ul>
+      <Link className={styles.btn} href="/projects">
+        More..
+      </Link>
     </section>
   );
 };

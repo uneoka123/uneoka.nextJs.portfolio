@@ -52,30 +52,6 @@ const Certify = () => {
         </li>
         <li>
           <Image
-            src="/img/certify/pythonCertify.png"
-            alt='pythonCertify'
-            width={550}
-            height={320}
-          />
-        </li>
-        <li>
-          <Image
-            src="/img/certify/goCertify.png"
-            alt='goCertify'
-            width={550}
-            height={320}
-          />
-        </li>
-        <li>
-          <Image
-            src="/img/certify/cppCertify.png"
-            alt='cppCertify'
-            width={550}
-            height={320}
-          />
-        </li>
-        <li>
-          <Image
             src="/img/certify/sqlCertify.png"
             alt='sqlCertify'
             width={550}
@@ -83,6 +59,9 @@ const Certify = () => {
           />
         </li>
       </ul>
+      <Link className={styles.btn} href="/certify">
+        More..
+      </Link>
     </section>
   )
 }

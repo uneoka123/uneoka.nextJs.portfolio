@@ -1,0 +1,24 @@
+@use "@/scss/mixins" as *;
+
+.skillCertify {
+  padding-top: 110px;
+  padding-bottom: 90px;
+}
+
+.container {
+  @include container;
+}
+
+.title {
+  font-size: 3rem;
+}
+
+.certifylist {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(288px, 1fr));
+  gap: 30px;
+
+  @include media-min(lg) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
